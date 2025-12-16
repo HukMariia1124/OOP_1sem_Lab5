@@ -9,8 +9,8 @@ namespace Lab5_WpfApp.Models
 {
     public class MyFrac : IMyNumber<MyFrac>
     {
-        public BigInteger nom { get; }
-        public BigInteger denom { get; }
+        public BigInteger Nom { get; }
+        public BigInteger Denom { get; }
         public MyFrac(BigInteger nom, BigInteger denom)
         {
             if (denom == 0)
@@ -23,12 +23,12 @@ namespace Lab5_WpfApp.Models
             }
 
             BigInteger gcd = BigInteger.GreatestCommonDivisor(BigInteger.Abs(nom), denom);
-            this.nom = nom / gcd;
-            this.denom = denom / gcd;
+            Nom = nom / gcd;
+            Denom = denom / gcd;
         }
-        public MyFrac Add(MyFrac that) => new MyFrac(nom * that.denom + that.nom * denom, denom * that.denom);
-        public MyFrac Subtract(MyFrac that) => new MyFrac(nom * that.denom - that.nom * denom, denom * that.denom);
-        public MyFrac Multiply(MyFrac that) => new MyFrac(nom * that.nom, denom * that.denom);
-        public MyFrac Divide(MyFrac that) => new MyFrac(nom * that.denom, denom * that.nom);
+        public MyFrac Add(MyFrac that) => new MyFrac(Nom * that.Denom + that.Nom * Denom, Denom * that.Denom);
+        public MyFrac Subtract(MyFrac that) => new MyFrac(Nom * that.Denom - that.Nom * Denom, Denom * that.Denom);
+        public MyFrac Multiply(MyFrac that) => new MyFrac(Nom * that.Nom, Denom * that.Denom);
+        public MyFrac Divide(MyFrac that) => new MyFrac(Nom * that.Denom, Denom * that.Nom);
     }
 }
