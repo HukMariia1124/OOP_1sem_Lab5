@@ -8,7 +8,7 @@ using System.Windows.Media;
 
 namespace Lab5_WpfApp.Models
 {
-    public class MyFrac : IMyNumber<MyFrac>
+    public class MyFrac : IMyNumber<MyFrac>, IComparable<MyFrac>
     {
         public BigInteger Num { get; private set; }
         public BigInteger Denom { get; private set; }
@@ -103,6 +103,13 @@ namespace Lab5_WpfApp.Models
                 string sign = Num < 0 ? "-" : "";
                 return $"{sign}{wholeNum} {RemNom}/{Denom}";
             }
+        }
+
+        public int CompareTo(MyFrac other)
+        {
+            BigInteger val1 = Num * other.Denom;
+            BigInteger val2 = other.Num * Denom;
+            return val1.CompareTo(val2);
         }
     }
 }
