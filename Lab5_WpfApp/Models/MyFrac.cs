@@ -111,5 +111,12 @@ namespace Lab5_WpfApp.Models
             BigInteger val2 = other.Num * Denom;
             return val1.CompareTo(val2);
         }
+
+
+        public static MyFrac operator +(MyFrac f1, MyFrac f2) => f1.Add(f2);
+        public static MyFrac operator -(MyFrac f1, MyFrac f2) => f1.Subtract(f2);
+        public static MyFrac operator *(MyFrac f1, MyFrac f2) => f1.Multiply(f2);
+        public static MyFrac operator /(MyFrac f1, MyFrac f2) => f1.Divide(f2);
+        public static MyFrac operator -(MyFrac f1) => new MyFrac(-f1.Num, f1.Denom);
     }
 }

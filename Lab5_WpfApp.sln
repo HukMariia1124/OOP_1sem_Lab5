@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab5_WpfApp", "Lab5_WpfApp\Lab5_WpfApp.csproj", "{DD8DEF1D-DB06-4977-BF42-23AB66EC4705}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tester", "Tester\Tester.csproj", "{AC7C3321-2718-4352-AAE5-00C530EC2C07}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DD8DEF1D-DB06-4977-BF42-23AB66EC4705} = {DD8DEF1D-DB06-4977-BF42-23AB66EC4705}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

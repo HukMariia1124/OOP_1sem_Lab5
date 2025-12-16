@@ -107,5 +107,13 @@ namespace Lab5_WpfApp.Models
 
             return $"{Re} {sign} {absIm}i";
         }
+
+
+
+        public static MyComplex operator +(MyComplex c1, MyComplex c2) => c1.Add(c2);
+        public static MyComplex operator -(MyComplex c1, MyComplex c2) => c1.Subtract(c2);
+        public static MyComplex operator *(MyComplex c1, MyComplex c2) => c1.Multiply(c2);
+        public static MyComplex operator /(MyComplex c1, MyComplex c2) => c1.Divide(c2);
+        public static MyComplex operator -(MyComplex c1) => new MyComplex(-c1.Re, -c1.Im);
     }
 }
