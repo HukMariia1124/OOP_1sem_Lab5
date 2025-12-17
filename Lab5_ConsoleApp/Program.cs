@@ -44,10 +44,9 @@ class Program
             T b2 = b.Multiply(b);
             Console.WriteLine("b^2 = " + b2);
             T a2MinusB2 = a2.Subtract(b2);
+            Console.WriteLine("(a^2 - b^2) = " + a2MinusB2);
 
             T aPlusB = a.Add(b);
-
-            Console.WriteLine("(a^2 - b^2) = " + a2MinusB2);
             Console.WriteLine("(a + b) = " + aPlusB);
 
             T rightPart = a2MinusB2.Divide(aPlusB);
